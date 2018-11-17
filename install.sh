@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 apt-get update
 apt-get --assume-yes upgrade
@@ -14,7 +14,7 @@ wget https://github.com/Motion-Project/motion/releases/download/release-4.1.1/pi
 dpkg -i pi_stretch_motion_4.1.1-1_armhf.deb
 
 #Install the dependencies from the repositories:
-apt-get install python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libz-dev
+apt-get install python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libz-dev 
 
 #Install motioneye, which will automatically pull Python dependencies (tornado, jinja2, pillow and pycurl):
 pip install motioneye
