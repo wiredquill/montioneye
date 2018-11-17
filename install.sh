@@ -1,10 +1,13 @@
 !/bin/bash
 
+apt-get update
+apt-get --assume-yes upgrade
+
 #Install ffmpeg and v4l-utils:
-apt-get install ffmpeg v4l-utils
+apt-get install ffmpeg v4l-utils --assume-yes upgrade
 
 #Install libmariadbclient18 and libpq5 required by motion:
-apt-get install libmariadbclient18 libpq5
+apt-get install libmariadbclient18 libpq5 --assume-yes upgrade
 
 #Install motion:
 wget https://github.com/Motion-Project/motion/releases/download/release-4.1.1/pi_stretch_motion_4.1.1-1_armhf.deb
