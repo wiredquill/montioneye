@@ -4,17 +4,17 @@ apt-get update
 apt-get --assume-yes upgrade
 
 #Install ffmpeg and v4l-utils:
-apt-get install ffmpeg v4l-utils --assume-yes upgrade
+apt-get install ffmpeg v4l-utils --assume-yes
 
 #Install libmariadbclient18 and libpq5 required by motion:
-apt-get install libmariadbclient18 libpq5 --assume-yes upgrade
+apt-get install libmariadbclient18 libpq5 --assume-yes
 
 #Install motion:
 wget https://github.com/Motion-Project/motion/releases/download/release-4.1.1/pi_stretch_motion_4.1.1-1_armhf.deb
 dpkg -i pi_stretch_motion_4.1.1-1_armhf.deb
 
 #Install the dependencies from the repositories:
-apt-get install python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libz-dev 
+apt-get install python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libz-dev --assume-yes
 
 #Install motioneye, which will automatically pull Python dependencies (tornado, jinja2, pillow and pycurl):
 pip install motioneye
