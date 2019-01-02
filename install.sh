@@ -31,3 +31,16 @@ cp /usr/local/share/motioneye/extra/motioneye.systemd-unit-local /etc/systemd/sy
 systemctl daemon-reload
 systemctl enable motioneye
 systemctl start motioneye
+
+
+curl -SL https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-armv7.tar.gz > node_exporter.tar.gz && \
+tar -xvf node_exporter.tar.gz -C /usr/local/bin/ --strip-components=1
+
+mkdir -p /var/lib/node_exporter/textfile
+chmod 777 /var/lib/node_exporter/textfile 
+
+cp nodeexporter.service /etc/systemd/system
+
+systemctl daemon-reload 
+systemctl enable nodeexporter 
+systemctl start nodeexporter
