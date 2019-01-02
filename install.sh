@@ -10,8 +10,8 @@ apt-get install ffmpeg v4l-utils --assume-yes
 apt-get install libmariadbclient18 libpq5 --assume-yes
 
 #Install motion:
-wget https://github.com/Motion-Project/motion/releases/download/release-4.1.1/pi_stretch_motion_4.1.1-1_armhf.deb
-dpkg -i pi_stretch_motion_4.1.1-1_armhf.deb
+wget https://github.com/Motion-Project/motion/releases/download/release-4.2.1/pi_stretch_motion_4.2.1-1_armhf.deb
+dpkg -i pi_stretch_motion_4.2.1-1_armhf.deb
 
 #Install the dependencies from the repositories:
 apt-get install python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libz-dev --assume-yes
